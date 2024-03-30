@@ -1,0 +1,268 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+<main id="main">
+   <!-- ======= Hero Section ======= -->
+  <div id="hero" class="hero route bg-image" style="background-image: url({% static 'assets/img/IMG-20240315-WA0022.JPG' %})">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="hero-title mb-4">Je m'appelle Martial ABALLO</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Monteur et Cadreur vidéo, Photographe,Grphiste"></span></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div><!-- End Hero Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">NOM: </span> <span>ABALLO Martial</span></p>
+                        <p><span class="title-s">Profile: </span> <span>DESIGNER</span></p>
+                        <p><span class="title-s">Email: </span> <span>aballomartial460@gamail.com</span></p>
+                        <p><span class="title-s">Phone: </span> <span>+229 99 53 99 36 </span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Compétances</p>
+                    <span>MONTEUR ET CADREUR VIDEO</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>PHOTOGRAPHE</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>GRAPHISME</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>INFORMATIQUE</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                       Apropos de moi
+                      </h5>
+                    </div>
+                    <p class="lead" style="font-size: 16px;">
+                      Bonjour,
+
+                      Je m'appelle ABALLO Martial, j'ai 22 ans et je réside à Calavi. Je suis un professionnel polyvalent dans les domaines de la création graphique,
+                       de la photographie, du montage vidéo et du cadrage.
+                      
+
+                      je suis  détenteur d'une attestation en informatique.
+                      
+                      Célibataire et sans enfant, je suis adaptatif, rigoureux et toujours prêt à apprendre. Mon ambition est de créer des visuels et des
+                       contenus qui captivent et inspirent.
+                      
+                      En tant que graphiste, je maîtrise les outils de conception graphique pour donner vie à des concepts créatifs et des idées uniques.
+                      
+                      En tant que photographe, je capture des moments mémorables avec un sens artistique et une attention particulière aux détails.
+                      
+                      En tant que monteur vidéo, je transforme des séquences brutes en histoires captivantes, en utilisant des techniques de montage et d'effets visuels.
+                      
+                      En tant que cadreur vidéo, je suis capable de capturer des images dynamiques et immersives qui racontent une histoire.
+                      
+                      
+                      
+                      Je suis passionné par mon travail et je suis toujours à la recherche de nouvelles opportunités pour collaborer sur des projets intéressants.
+                      
+                      N'hésitez pas à me contacter si vous souhaitez discuter de collaborations potentielles ou si vous avez des questions.
+                      
+                      Cordialement,
+                      ABALLO Martial
+                    </p>
+                    
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    
+  <!-- ======= Portfolio Section ======= -->
+ <section id="work" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Portfolio
+          </h3>
+          <p class="subtitle-a">
+           Bienvenu dans mon portfolio
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      {% for folio in portfolios %}
+      <div class="col-md-4">
+        
+        <div class="work-box">
+         
+          <a href="{{ folio.image.url }} " data-gallery="portfolioGallery" class="portfolio-lightbox" >
+            
+            <div class="work-img">
+             <img src="{{ folio.image.url }}" alt="" class="photo" style="max-width: 200px; max-height: 200px;">
+            </div>
+          </a>
+          <div class="work-content">
+            <div class="row">
+              
+              <div class="col-sm-8">
+                <h2 class="w-title">{{ folio.tittre }}</h2>
+         
+                
+                <div class="w-more">
+                  
+                  <span class="w-ctegory">{{ category.nom }}</span> / <span class="w-date">{{ folio.date }}</span>
+                  
+                </div>
+                
+              </div>
+              <div class="col-sm-4">
+                <div class="w-like">
+                  <a href="{%  url 'detail_de_portfolio' folio.id %}"> <span class="bi bi-plus-circle"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+     
+    
+      {% endfor  %}
+
+
+      <center>  <h3 >Mes vidéos</h3> </center>
+      <div class="col-md-4" style="width: 100%;">
+      <div class="work-box" style="display: flex; ">
+      <div class="work-img" style="width: 50%; height: 500PX; margin: 10px; " >
+      <center> <h4> Mas activité </h4></center>
+      <p> hehjbdffddfzbkjlfzkhfezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzbdbjf</p>
+        <video width="640" height="360" controls>
+          <source src="{% static 'assets/mes_video/video1.mp4' %}" type="video/mp4"  style="width: 10px; height: 100px;" >
+         
+        </video>
+        
+       </div>
+
+
+
+       
+       <div class="work-img" style="width: 50%; height: 500px; margin: 10px;">
+        <center><h4>Mas animation  </h4></center>
+        <p> hehjbdffddfzbkjlfzkhfezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzbdbjf</p>
+        <video width="640" height="360" controls>
+          <source src="{% static 'assets/mes_video/video2.mp4' %}" type="video/mp4" style="width: 40px; height: 100px;">
+         
+        </video>
+        
+       </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</section><!-- End Portfolio Section -->
+
+  
+  
+   
+
+    <!-- ======= Testimonials Section ======= -->
+    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="author-test">
+                      <img src="{% static 'assets/img/IMG-mas0.jpg' %}" alt="" class="rounded-circle b-shadow-a" style="max-width: 100px;max-height: 100px;">
+                      <span class="author">Xavi Alonso</span>
+                    </div>
+                    <div class="content-test">
+                      <p class="description lead">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="author-test">
+                      <img src="{% static 'assets/img/IMG-mas1.jpg' %}" alt="" class="rounded-circle b-shadow-a" style="max-width: 100px;max-height: 100px;">
+                      <span class="author">Marta Socrate</span>
+                    </div>
+                    <div class="content-test">
+                      <p class="description lead">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
+          
+        </div> -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Testimonials Section --><!-- End Testimonials Section -->
+
+   
+
+   
+  </main><!-- End #main -->
+  {% endblock content%}
+
+ 

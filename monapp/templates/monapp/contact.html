@@ -1,0 +1,91 @@
+
+{% extends 'base.html' %}
+
+{%  load static %}
+
+
+
+{% block content %}
+     <!-- ======= Contact Section ======= -->
+     <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="contact-mf">
+                <div id="contact" class="box-shadow-full">
+                  <div class="row">
+                    <div class="col-md-6">
+                         
+
+                      <div class="col-lg-8">
+                        <div class="contact-form-card">
+                          <h5 class="title-left">
+                            Laisser moi un message
+                          </h5>
+                           
+                        </div>
+                    </div>
+
+
+                      <div class="title-box-2">
+                       
+                      </div>
+                      <div  style="color: green; font-size: 25px;">{{ message }}</div>
+                      <div><br>
+                        <form method="post" action="{%  url 'contact'  %}">
+                          {% csrf_token %}
+                          <div class="form-group">
+                              <input  class="form-control" type="text" name="nom" placeholder="Name *" required>
+                          </div> <br>
+                          <div class="form-group">
+                              <input class="form-control" type="email" name="email" placeholder="Email *" required>
+                          </div><br>
+                          <div class="form-group">
+                            <input class="form-control" type="sujet" name="sujet" placeholder="Sujet *" required>
+                        </div><br>
+                          <div class="form-group">
+                              <textarea class="form-control" name="description"  id=" placeholder="Message *" rows="5" required></textarea>
+                          </div><br>
+                          <div class="form-group ">
+                              <button type="submit" class="form-control btn btn-primary" >Envoyer un Message</button>
+                          </div>
+                          
+                      </form>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-box-2 pt-4 pt-md-0">
+                        <h5 class="title-left">
+                          Contactez-moi
+                        </h5>
+                      </div>
+                      <div class="more-info">
+                        <p class="lead">
+                          Merci d'avoir visiter ma page. Vous pouver
+                           me contacter en remplissant ces champs.
+                        </p>
+                        <ul class="list-ico">
+                          <li><span class="bi bi-geo-alt"></span> CALAVI MAISON  ABALLO</li>
+                          <li><span class="bi bi-phone"></span> +229 99  53 99 32</li>
+                          <li><span class="bi bi-envelope"></span> aballomartial460@gamail.com</li>
+                        </ul>
+                      </div>
+                      <div class="socials">
+                        <ul>
+                          <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
+                          <li><a href="mailto:aballomartial460@gmail.com"><span class="ico-circle"><img src="{% static 'assets/img/logo-mail.jpg' %}" alt="" style="width: 20px; height: 20px;"></span></a></li>
+                          <li><a href="https://wa.me/99539932"><span class="ico-circle"><img src="{% static 'assets/img/logo-wa.jpg' %}" alt="" style="width: 20px; height: 20px;"></i></span></a></li>
+                          <!-- <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Contact Section -->
+  
+{% endblock content%}
