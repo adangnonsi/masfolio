@@ -16,7 +16,7 @@
           <h2 class="hero-title mb-4">Portfolio Details</h2>
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
-              <a href="#">Home</a>
+              <a href="{% url 'home' %}">Home</a>
             </li>
             <li class="breadcrumb-item active">Portfolio Details</li>
           </ol>
@@ -55,20 +55,30 @@
             </div>
           </div>
 
+
+
+         
+
+
+
+
+
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-            <li><strong>Category</strong>: {{categories.nom}}</li>
+                {% if  portfolios.categorie %}
+                <li><strong>Category</strong>: {{  portfolios.categorie.nom  }}</li>
+                {% endif %}
               <li><strong>Client</strong>: {{portfolios.nom_client}}</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project date</strong>:  {{ portfolios.date }} </li>
                 
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Des exemple d'affiche déjà réalisé.</h2>
+              <h2>Des exemple d'article  déjà réalisé.</h2>
               <p>
-                {{portfolios.description}}
+                {{ portfolios.description }}
               </p>
             </div>
           </div>

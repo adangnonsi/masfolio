@@ -86,6 +86,9 @@ a:hover {
   overflow: hidden;
 }
 
+
+
+
 .bg-image {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -98,6 +101,8 @@ a:hover {
     background-attachment: scroll;
   }
 }
+
+
 
 .overlay-mf {
   background-color: #0078ff;

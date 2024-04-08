@@ -5,6 +5,20 @@
 
 {% block content %}
     
+
+
+<style>
+
+
+.vid {
+ background-color: aquamarine;
+}
+
+
+
+</style>
+
+
 <main id="main">
    <!-- ======= Hero Section ======= -->
   <div id="hero" class="hero route bg-image" style="background-image: url({% static 'assets/img/IMG-20240315-WA0022.JPG' %})">
@@ -171,32 +185,7 @@
       {% endfor  %}
 
 
-      <center>  <h3 >Mes vidéos</h3> </center>
-      <div class="col-md-4" style="width: 100%;">
-      <div class="work-box" style="display: flex; ">
-      <div class="work-img" style="width: 50%; height: 500PX; margin: 10px; " >
-      <center> <h4> Mas activité </h4></center>
-      <p> hehjbdffddfzbkjlfzkhfezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzbdbjf</p>
-        <video width="640" height="360" controls>
-          <source src="{% static 'assets/mes_video/video1.mp4' %}" type="video/mp4"  style="width: 10px; height: 100px;" >
-         
-        </video>
-        
-       </div>
-
-
-
-       
-       <div class="work-img" style="width: 50%; height: 500px; margin: 10px;">
-        <center><h4>Mas animation  </h4></center>
-        <p> hehjbdffddfzbkjlfzkhfezzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzbdbjf</p>
-        <video width="640" height="360" controls>
-          <source src="{% static 'assets/mes_video/video2.mp4' %}" type="video/mp4" style="width: 40px; height: 100px;">
-         
-        </video>
-        
-       </div>
-      </div>
+      
     </div>
 
       </div>
@@ -206,10 +195,68 @@
 
   
   
+
+
+
+<section id="work" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Portfolio
+          </h3>
+          <p class="subtitle-a">
+           Section vidéo
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-md-4">
+        <div class="work-box">
+          <center><h4>Plongez dans l'Oasis de Fraîcheur : Palmida, le Secret de la Vitalité !  </h4></center>
+          <video width="640" height="360" controls>
+            <source src="{% static 'assets/mes_video/video1.mp4' %}" type="video/mp4"   >
+           
+          </video>
+          
+          
+        </div>
+
+        <p>Découvrez notre Sélection de Jus et Palmida !</p>
+        <div class="work-box">
+          <center> <h4> Éveillez vos Sens avec notre Jus 100% Naturel : Une Gorgée de Pure Fraîcheur ! </h4></center>
+          <video width="640" height="360" controls>
+            <source src="{% static 'assets/mes_video/video1.mp4' %}" type="video/mp4"   >
+           
+          </video>
+          
+          
+        </div>
+
+      </div>
+    
+     
+     
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
    
 
     <!-- ======= Testimonials Section ======= -->
-    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <!-- <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
       <div class="overlay-mf"></div>
       <div class="container">
         <div class="row">
@@ -232,7 +279,7 @@
                     </div>
                   </div>
                 </div><!-- End testimonial item -->
-
+<!-- 
                 <div class="swiper-slide">
                   <div class="testimonial-box">
                     <div class="author-test">
@@ -246,10 +293,10 @@
                       </p>
                     </div>
                   </div>
-                </div><!-- End testimonial item -->
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
+                </div> End testimonial item -->
+            <!--   </div>
+              <div class="swiper-pagination"></div> 
+            </div> --> 
 
             <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
           
